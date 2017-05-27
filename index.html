@@ -4,56 +4,66 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jrtapsell/personal/b955b914/src/res/mdl/custom.css">
     <link rel="stylesheet" href="index.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </head>
 <body>
-<div class="mdl-grid">
-    <h1 class="mdl-cell mdl-cell--12-col">Badge generator</h1>
-    <div class="mdl-cell mdl-cell--4-col mdl-grid">
-        <h2 class="mdl-cell mdl-cell--12-col">Settings</h2>
-        <form class="mdl-cell mdl-cell--12-col mdl-grid">
-            <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
-                <input class="mdl-textfield__input" type="text" id="left" value="Left">
-                <label class="mdl-textfield__label" for="link">Left</label>
+<div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <h1 class="mdl-layout-title">Badge generator</h1>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="mdl-grid">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-cell--10-col mdl-cell mdl-grid" id="pageContent">
+                <div class="mdl-cell mdl-cell--4-col mdl-grid">
+                    <h2 class="mdl-cell mdl-cell--12-col">Settings</h2>
+                    <form class="mdl-cell mdl-cell--12-col mdl-grid">
+                        <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
+                            <input class="mdl-textfield__input" type="text" id="left" value="Left">
+                            <label class="mdl-textfield__label" for="link">Left</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
+                            <input class="mdl-textfield__input" type="text" id="right" value="Right">
+                            <label class="mdl-textfield__label" for="right">Right</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
+                            <input class="mdl-textfield__input" type="text" id="link" value="https://www.google.com">
+                            <label class="mdl-textfield__label" for="link">Link</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
+                            <input list="colors" class="mdl-textfield__input" id="color" value="blue">
+                            <label class="mdl-textfield__label" for="link">Color</label>
+                        </div>
+                        <datalist id="colors">
+                            <option value='brightgreen'> </option>
+                            <option value='green'> </option>
+                            <option value='yellowgreen'> </option>
+                            <option value='yellow'> </option>
+                            <option value='orange'> </option>
+                            <option value='red'> </option>
+                            <option value='lightgrey'> </option>
+                            <option value='blue'> </option>
+                        </datalist>
+                    </form>
+                </div>
+                <div class="mdl-cell mdl-cell--8-col mdl-grid">
+                    <h2 class="mdl-cell mdl-cell--12-col">Badge</h2>
+                    <div class="mdl-cell mdl-cell--12-col mdl-grid"><img src="https://img.shields.io/badge/User-jrtapsell-blue.svg" id="preview"></div>
+                    <h2 class="mdl-cell mdl-cell--12-col">Results</h2>
+                    <h3 class="mdl-cell mdl-cell--4-col">URL</h3><pre class="mdl-cell mdl-cell--8-col" id="url"></pre>
+                    <h3 class="mdl-cell mdl-cell--4-col">Markdown</h3><pre class="mdl-cell mdl-cell--8-col" id="markdown"></pre>
+                </div>
             </div>
-            <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
-                <input class="mdl-textfield__input" type="text" id="right" value="Right">
-                <label class="mdl-textfield__label" for="right">Right</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
-                <input class="mdl-textfield__input" type="text" id="link" value="https://www.google.com">
-                <label class="mdl-textfield__label" for="link">Link</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col">
-                <input list="colors" class="mdl-textfield__input" id="color" value="blue">
-                <label class="mdl-textfield__label" for="link">Color</label>
-            </div>
-            <datalist id="colors">
-                <option value='brightgreen'> </option>
-                <option value='green'> </option>
-                <option value='yellowgreen'> </option>
-                <option value='yellow'> </option>
-                <option value='orange'> </option>
-                <option value='red'> </option>
-                <option value='lightgrey'> </option>
-                <option value='blue'> </option>
-            </datalist>
-        </form>
-    </div>
-    <div class="mdl-cell mdl-cell--8-col mdl-grid">
-        <h2 class="mdl-cell mdl-cell--12-col">Badge</h2>
-        <div class="mdl-cell mdl-cell--12-col mdl-grid"><img src="https://img.shields.io/badge/User-jrtapsell-blue.svg" id="preview"></div>
-        <h2 class="mdl-cell mdl-cell--12-col">Results</h2>
-        <h3 class="mdl-cell mdl-cell--4-col">URL</h3><pre class="mdl-cell mdl-cell--8-col" id="url"></pre>
-        <h3 class="mdl-cell mdl-cell--4-col">Markdown</h3><pre class="mdl-cell mdl-cell--8-col" id="markdown"></pre>
-    </div>
-    <footer class="mdl-cell mdl-cell--12-col">
-        This is a simple [unofficial] UI for https://shields.io/
-    </footer>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+        <footer class="mdl-mega-footer" id="footer">This is a simple [unofficial] UI for <a href="https://shields.io/">shields.io</a>, made by <a href="https://www.jrtapsell.co.uk">James Tapsell</a></footer>
+    </main>
 </div>
 </body>
 </html>
