@@ -24,3 +24,7 @@ header.mdl-layout__header.is-casting-shadow {
 .mdl-layout__content {
     flex: 1 0 auto;
 }
+
+img#preview {
+    height: 4em;
+}
