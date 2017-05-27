@@ -7,6 +7,7 @@
 pre {
     text-align: left;
     background: #CCC;
+    overflow: overlay;
 }
 footer#footer {
     width: 100%;
@@ -18,4 +19,8 @@ header.mdl-layout__header.is-casting-shadow {
 }
 .mdl-layout__header-row {
     padding: 0 14px 0 1em !important;
+}
+
+.mdl-layout__content {
+    flex: 1 0 auto;
 }
