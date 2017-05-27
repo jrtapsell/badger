@@ -28,3 +28,10 @@ header.mdl-layout__header.is-casting-shadow {
 img#preview {
     height: 4em;
 }
+
+.site-icon {
+    height:2em;
+    width:2em;
+    padding: 0 2em;
+    margin: 0;
+}
