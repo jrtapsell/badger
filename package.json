@@ -1,0 +1,24 @@
+{
+  "name": "badger",
+  "version": "1.0.0",
+  "description": "[![codebeat badge](https://codebeat.co/badges/40f97645-68cc-40e3-a1aa-4c594e696b73)](https://codebeat.co/projects/github-com-jrtapsell-badger-master) # badger",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrtapsell/badger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrtapsell/badger/issues"
+  },
+  "homepage": "https://github.com/jrtapsell/badger#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-sitemap": "^4.2.0",
+    "sw-precache": "^5.1.1"
+  }
+}

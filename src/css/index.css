@@ -35,3 +35,7 @@ img#preview {
     padding: 0 2em;
     margin: 0;
 }
+
+pre {
+    padding-bottom: 2em;
+}
